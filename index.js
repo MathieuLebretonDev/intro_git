@@ -12,6 +12,11 @@ app.get('/hello/:name' , (req, res) => {
     res.end;
 });
 
+app.get('/goodbye/:name' , (req, res) => {
+    res.write(`Goodbye ${req.params.name} `);
+    res.end;
+});
+
 app.listen(3000, _ => {
     console.log(`App listening on http://localhost:3000`);
 });
